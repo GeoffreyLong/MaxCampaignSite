@@ -76,7 +76,7 @@ html, body{
 	left:10%;
 	buffer:20px;
 }
-.icon{
+.contacts{
 	overflow:hidden;
 	position:relative;
 	height:100px;
@@ -86,27 +86,37 @@ html, body{
 	-webkit-transition: width 1s;
 	transition: width 1s;
 }
+.contacts:hover{
+	width:800px;
+}
+.icon{
+	position:absolute;
+	opacity:1;
+}
 .icon:hover{
-	width:700px;
-}
-#phone:hover >#phoneIconHover{
-	opacity:1;
-}
-#phone:hover >#phoneIcon{
 	opacity:0;
 }
-#phoneIconHover{
+.contacts:hover >.icon{
+	opacity:0;
+}
+.iconHover{
 	position:absolute;
 	opacity:0;
+	z-index:10;
 }
-#phoneIcon{
-	position:absolute;
+.iconHover:hover{
+	opacity:1;
 }
-#phoneIcon:hover{
+.iconHover:hover >.icon{
 	opacity:0;
 }
-#phoneIconHover:hover{
-	opacity:1;
+#emailAddress{
+	line-height:100px;
+	width:500px;
+	font-size: 3em;
+	position:relative;
+	left:120px;
+	vertical-align:middle;
 }
 #phoneNumber{
 	line-height:100px;
@@ -115,6 +125,39 @@ html, body{
 	position:relative;
 	left:120px;
 	vertical-align:middle;
+}
+#facebookAddress{
+	line-height:100px;
+	width:700px;
+	font-size: 2em;
+	position:relative;
+	left:120px;
+	vertical-align:middle;
+}
+.clickToCopy:hover{
+	background: rgba(0,0,0,0.7);
+	opacity:1;
+	cursor:pointer;
+}
+.clickToCopy{
+	line-height:100px;
+	position:absolute;
+	left:120px;
+	vertical-align:middle;
+	text-align:center;
+	font-size: 3em;
+	color:#FFFFFF;
+	opacity:0;
+	z-index:10;
+}
+#copyPhone{
+	width:500px;
+}
+#copyEmail{
+	width:605px;
+}
+#linkFB{
+	width:630px;
 }
 #aboutMe{
 	left:10%;

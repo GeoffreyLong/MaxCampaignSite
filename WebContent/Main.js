@@ -37,7 +37,9 @@ $(document).ready(function(){
 		"left" : $("#coverPhoto").offset().left+25,
 		"top" : $("#coverPhoto").height() - 50,
 	});
-	
+	$("#linkFB").on("click", function(){
+		window.open("https://www.facebook.com/Max.a.millionaire", "_blank");
+	});
 	$(window).scroll(function (event) {
 	    var y = $(this).scrollTop();
 	    if (y >= $("#topSection").height()){
