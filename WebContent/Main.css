@@ -96,9 +96,10 @@ html, body{
 .icon:hover{
 	opacity:0;
 }
+/*
 .contacts:hover >.icon{
 	opacity:0;
-}
+}*/
 .iconHover{
 	position:absolute;
 	opacity:0;
