@@ -77,17 +77,44 @@ html, body{
 	buffer:20px;
 }
 .icon{
+	overflow:hidden;
 	position:relative;
-	height:50px;
-	width:50px;
+	height:100px;
+	width:100px;
 	margin:50px;
 	margin-right:0px;
-	background:#000000;
 	-webkit-transition: width 1s;
 	transition: width 1s;
 }
 .icon:hover{
-	width:400px;
+	width:700px;
+}
+#phone:hover >#phoneIconHover{
+	opacity:1;
+}
+#phone:hover >#phoneIcon{
+	opacity:0;
+}
+#phoneIconHover{
+	position:absolute;
+	opacity:0;
+}
+#phoneIcon{
+	position:absolute;
+}
+#phoneIcon:hover{
+	opacity:0;
+}
+#phoneIconHover:hover{
+	opacity:1;
+}
+#phoneNumber{
+	line-height:100px;
+	width:500px;
+	font-size: 5em;
+	position:relative;
+	left:120px;
+	vertical-align:middle;
 }
 #aboutMe{
 	left:10%;
