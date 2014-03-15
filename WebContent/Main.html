@@ -10,9 +10,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script src="masonry.pkgd.min.js"></script>
+<script src="jquery.zclip.min.js"></script>
 <script type="text/JavaScript" src="./Main.js"></script>
 <link rel="stylesheet" type="text/css" href="./Main.css" />
-
 </head>
 <body>
 
@@ -189,6 +189,15 @@
 			</div>
 		</div>
 </div>
+
+<script>
+$(".clickToCopy").zclip({
+    path: "js/ZeroClipboard.swf",
+    copy: function(){
+		return $(this).prev().val();
+	}
+});
+</script>
 
 </body>
 </html>
