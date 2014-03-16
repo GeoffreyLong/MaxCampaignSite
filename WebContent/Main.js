@@ -45,7 +45,8 @@ $(document).ready(function(){
 	    if (y >= $("#topSection").height()){
 	      $('#toolbar').addClass('fixed');
 	      $('#contentBox').addClass('fixed');
-	    } else {
+	    } 
+	    else{
 	      $('#toolbar').removeClass('fixed');
 	      $('#contentBox').removeClass('fixed');
 	    }

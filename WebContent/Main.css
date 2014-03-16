@@ -63,12 +63,6 @@ html, body{
 	cursor:pointer;
 	background:#234567;
 }*/
-#endorsements{
-	left:40%;
-}
-#contactMe{
-	right:10%;
-}
 #contactMeContent{
 	position:relative;
 	margin-top:100px;
@@ -166,9 +160,6 @@ html, body{
 }
 #linkFB{
 	width:630px;
-}
-#aboutMe{
-	left:10%;
 }
 #contentBox{
 	position:absolute;
