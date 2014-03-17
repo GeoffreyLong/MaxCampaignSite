@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <title>Campaign</title>
-<meta name="description" content="" />
-<meta charset="UTF-8" />
 
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script src="masonry.pkgd.min.js"></script>
-<script src="jquery.zclip.min.js"></script>
-<script type="text/JavaScript" src="./Main.js"></script>
-<link rel="stylesheet" type="text/css" href="./Main.css" />
+<script type="text/JavaScript" src="./maxCampaign.js"></script>
+<link rel="stylesheet" type="text/css" href="./maxCampaign.css" />
 </head>
 <body>
 
 <div id="topSection">
-	<img src="./img/Coverphoto2.png" id="coverPhoto" style="border-style:none;">
-	<span id="photoCaption"> Click photo to Vote!! </span>
+	<img src="/img/Coverphoto2.png" id="coverPhoto">
 </div>
 <div id="toolbar">
 
@@ -27,23 +20,24 @@
 	<div id="contactMe" class="button"> Contact Me </div>
 	<div id="aboutMe" class="button"> About Me </div>
 -->
-
+	
 	<ul id="clock-timer-freebie">
 		<li>
 			<div class="tools-bar">
+				<img src="/img/4-leaf-clover.png" class="clover"/>
 				<a href="#"><span id="aboutMe" class="button">About Me</span></a>
 				<a href="#"><span id="endorsements" class="button">Endorsements</span></a>
 				<a href="#"><span id="contactMe" class="button">Contact Me</span></a>
+				<img src="/img/4-leaf-clover.png" class="clover" id="cloverTwo"/>
 			</div>
 		</li>
 	</ul>
-	
 </div>
 <div id="contentBox">
-	<div id="endorsementContent" class="content">
+	<div id="endorsementContent" class="js-masonry" data-masonry-options='{"itemSelector":".item","columnWidth":480}'>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/DanChaim.png"/>
+				<img src="/img/DanChaim.png"/>
 			</div>
 			<div class="endorseTxt">
 				Max Drabkin is a very committed, creative and professional person and you should vote for him to be the VP Communications of the AUS. In the time I've known Max he has surprised me over and over again with his ability to balance school and his extracurricular activities. Working for the Bull and Bear doing video editing, he has done an amazing job capturing the spirit of McGill. Max is a very friendly and approachable person who will be a great team member on the AUS. I have no doubt in my mind that he will do an amazing job.
@@ -56,7 +50,7 @@
 		</div>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/CassieLee.jpg"/>
+				<img src="/img/CassieLee.jpg"/>
 			</div>
 			<div class="endorseTxt">
 				Max was an amazing frosh leader, I couldn't have hoped for a better frosh experience. My entire group felt included and comfortable, his leadership and charisma was a perfect way to be introduced to the dynamic McGill community. I have no doubt that max will be a successful VP communications  and show the same dedication to this position as he did my frosh group.
@@ -67,7 +61,7 @@
 		</div>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/RebeccaSuggit.jpg"/>
+				<img src="/img/RebeccaSuggit.jpg"/>
 			</div>
 			<div class="endorseTxt">
 				If Max is anything- it's enthusiastic. He brings passion and a smile to each project he attempts to tackle, while maintaining a determined and focused attitude. This combination is sure to guarantee success and a great year for AUS if he's elected.
@@ -78,7 +72,7 @@
 		</div>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/Zain.png"/>
+				<img src="/img/Zain.png"/>
 			</div>
 			<div class="endorseTxt">
 				I have had the distinct pleasure of working with Max on several projects over the past year. I am struck by his ability and willingness to take on leadership roles and build strong relationships with the people he works with. He has a great affinity for motivating and organizing a group of people to achieve a wide variety of goals and I believe his skill set and experiences make him an ideal candidate for the AUS VP Communications position.
@@ -89,7 +83,7 @@
 		</div>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/EileenChen.jpg"/>
+				<img src="/img/EileenChen.jpg"/>
 			</div>
 			<div class="endorseTxt">
 				When we interviewed Max, we just knew we had to have him on our team. He was enthusiastic, showed immense work ethic and commitment, and brought value-added skills to the table. Throughout the year, he has flawlessly followed through on all his responsibilities while taking on new initiatives. I have no doubt that as VP Communications of the AUS, Max will be fully able to perform his tasks, add value to it, keep the AUS President up to date, and cater to the needs of all members of the Arts Undergraduate Society.
@@ -102,7 +96,7 @@
 		</div>
 		<div class="endorse">
 			<div class="endorseImg">
-				<img src="./img/AlexMagder.jpg"/>
+				<img src="/img/AlexMagder.jpg"/>
 			</div>
 			<div class="endorseTxt">
 				Max Drabkin is a very up–beat and outgoing person. During Frosh, Max was great at making sure that everyone felt included and really transmitted his enthusiasm to the group. He is a natural leader, and a great person to be around
@@ -111,23 +105,34 @@
 				- Alex Magder
 			</div>
 		</div>
+		<div class="endorse">
+			<div class="endorseImg">
+				<img src="/img/Kyle.jpeg"/>
+			</div>
+			<div class="endorseTxt">
+				Max takes on every new thing he wishes to pursue with the utmost enthusiasm. I can look back to when he first started his video editing. Now look what he has done with it: taking on clients, photographing events, constantly posting full after-movies of a night out, working for hours purely for the enjoyment of his peers. This is all testament to the commitment, time and care he will give to his position as VP Communications should you vote for him.
+			</div>
+			<div class="endorseSig">
+				- Kyle Leroux
+			</div>
+		</div>
 	</div>
 	<div id="contactMeContent" class="content">
 		<div id="facebook" class="contacts">
-			<img src="img/facebookHover.png" id="facebookIconHover" class="iconHover"/>
-			<img src="img/facebook.png" id="facebookIcon" class="icon"/>
+			<img src="/img/facebookHover.png" id="facebookIconHover" class="iconHover"/>
+			<img src="/img/facebook.png" id="facebookIcon" class="icon"/>
 			<span id="facebookAddress"> https://www.facebook.com/Max.a.millionaire </span>
 			<span class="clickToCopy" id="linkFB"> Click To Link </span>
 		</div>
 		<div id="email" class="contacts">
-			<img src="img/envelopeHover.png" id="envelopeIconHover" class="iconHover"/>
-			<img src="img/envelope.png" id="envelopeIcon" class="icon"/>
+			<img src="/img/envelopeHover.png" id="envelopeIconHover" class="iconHover"/>
+			<img src="/img/envelope.png" id="envelopeIcon" class="icon"/>
 			<span id="emailAddress"> max.drabkin@mail.mcgill.ca </span>
 			<span class="clickToCopy" id="copyEmail"> Click To Copy </span>
 		</div>
 		<div id="phone" class="contacts">
-			<img src="img/PhoneIconNewHover.png" id="phoneIconHover" class="iconHover"/>
-			<img src="img/PhoneIconTransparent.png" id="phoneIcon" class="icon"/>
+			<img src="/img/PhoneIconNewHover.png" id="phoneIconHover" class="iconHover"/>
+			<img src="/img/PhoneIconTransparent.png" id="phoneIcon" class="icon"/>
 			<span id="phoneNumber">514 465 1510</span>
 			<span class="clickToCopy" id="copyPhone"> Click To Copy </span>
 		</div>
@@ -139,8 +144,8 @@
 		<div id=aboutMeMain>
 			<div class="encapsulate">
 				<div class="dropper"> <strong>ABOUT: </strong> </div>
-				<div id="aboutDrop" class="drop">
-					Hello everyone!!! My name is Max Drabkin and I’m running to be the AUS VP Communications for the upcoming year! I’m a 3rd year Economics major with a Minor in Management. I originally transferred from the Science Faculty but have since found my calling in Arts. As your VP Communications, I will dedicate my time and effort to making this upcoming year one of the most aspirational and creative for the AUS. Working with your other execs, we will aim to provide you as Arts students, a sense of identity within your faculty, something that Arts has been having difficulty with for some time. 
+				<div id="aboutDrop">
+					&nbsp; &nbsp; &nbsp; &nbsp; Hello everyone!!! My name is Max Drabkin and I’m running to be the AUS VP Communications for the upcoming year! I’m a 3rd year Economics major with a Minor in Management. I originally transferred from the Science Faculty but have since found my calling in Arts. As your VP Communications, I will dedicate my time and effort to making this upcoming year one of the most aspirational and creative for the AUS. Working with your other execs, we will aim to provide you as Arts students, a sense of identity within your faculty, something that Arts has been having difficulty with for some time. 
 				</div>
 			</div>
 			<br><br>
@@ -178,17 +183,17 @@
 		<div id="experience">
 				<strong>EXPERIENCE:</strong><br>
 				<br>
-				VP Promotions of McGill Red Thunder<br>
+				<em>VP Promotions of McGill Red Thunder</em><br>
 				Promotion through Social Media <br>
 				Created Event Pages <br>
 				Oversaw ordering of Morph Suits<br>
 				<br>
-				Video Editor Bull and Bear<br>
+				<em>Video Editor Bull and Bear</em><br>
 				Recently filmed the 1000 person MUS ValentinesEvent<br>
 				Did photography for interview with principal of McGill<br>
 				Filmed other events such as Effusion Acapella Group<br>
 				<br>
-				Marketing Network<br>
+				<em>Marketing Network</em><br>
 				Worked on several marketing events – MUCH Week<br>
 				Filmed/Photographed these same events<br>
 				<br>
@@ -214,4 +219,3 @@ $(".clickToCopy").zclip({
 </script>
 
 </body>
-</html>
